@@ -11,15 +11,17 @@ import { example } from "../src/data";
     // escribe aquí tu test
   //});
 //});
-
-describe('Search number', () => {
-
-  it('pokemon has id on it', () => {
+const pokemon = arrPokemon()
+describe('SearchNumber', () => {
+  
+  it('pokemon has 1 on it', () => {
     
-    expect(pokemon).toContain('id');
+    expect(pokemon.id).toContain('1');
   });
+});
 
-  describe('example', () => {
-    // escribe aquí tu test
-  });
+describe('showType', () => {
+  it('found Fire in pokemon',()=>{
+    expect(pokemon.type).toContain('Fire')
+  })
 });

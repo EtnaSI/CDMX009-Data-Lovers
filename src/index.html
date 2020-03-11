@@ -8,7 +8,39 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
+    <h1>Pokemon</h1>
+    <label for="">Número</label>
+    <input type="text" id="number">
+    <button type="button" id="enterNumber">Buscar</button>
+    <br>
+    <select id="type">
+      <option value="Selection" selected>Tipo</option>
+      <option value="Grass">Planta</option>
+      <option value="Poison">Veneno</option>
+      <option value="Fire">Fuego</option>
+    </select>
+
+      <select id="weaknesses">
+        <option value="Selection" selected>Debilidad</option>
+        <option value="Grass">Planta</option>
+        <option value="Poison">Veneno</option>
+        <option value="Fire">Fuego</option>
+      </select>
+
+      <select id="order">
+        <option value="Selection" selected>Orden</option>
+        <option value="1-151">Ascendente del 1-151</option>
+        <option value="151-1">Descendente del 151-1</option>
+        <option value="a-z">A-Z</option>
+        <option value="z-a">Z-A</option>
+      </select>
+
+
     <script type="module" src="main.js"></script>
+  <div id="root">
+
+  </div>
+
+  </div>
   </body>
 </html>
