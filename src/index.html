@@ -2,12 +2,14 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8">
-    <title>Data Lovers</title>
+    <title>Pokémon Data Lovers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Saira+Condensed&display=swap">
+    <link rel="stylesheet" href="style.css"/>
   </head>
   <body>
+<<<<<<< HEAD
     <h1>Pokemon</h1>
     <label for="">Número</label>
     <input type="text" id="number">
@@ -36,6 +38,69 @@
       </select>
 
 
+=======
+    <header>
+      <div class="logo">
+        <img src="./imagenes/logoPokemon.png" alt="">
+      </div>
+    </header>
+    <nav class="searchContainer">
+      <div class="searchItems">
+        <p class="instruction">Busca por:</p>
+        <select class="type" id="type">
+          <option value="" selected>Tipo</option>
+          <option value="Bug">Bicho</option>
+          <option value="Dragon">Dragón</option>
+          <option value="Electric">Eléctrico</option>
+          <option value="Fighting">Lucha</option>
+          <option value="Fire">Fuego</option>
+          <option value="Flying">Volador</option>
+          <option value="Ghost">Fantasma</option>
+          <option value="Grass">Planta</option>
+          <option value="Ground">Tierra</option>
+          <option value="Ice">Hielo</option>
+          <option value="Normal">Normal</option>
+          <option value="Poison">Veneno</option>
+          <option value="Psychic">Psíquico</option>
+          <option value="Rock">Roca</option>
+          <option value="Water">Agua</option>
+        </select>
+        <select class="weaknesses" id="weaknesses">
+          <option value="" selected>Debilidad</option>
+          <option value="Bug">Bicho</option>
+          <option value="Dragon">Dragón</option>
+          <option value="Electric">Eléctrico</option>
+          <option value="Fighting">Lucha</option>
+          <option value="Fire">Fuego</option>
+          <option value="Flying">Volador</option>
+          <option value="Ghost">Fantasma</option>
+          <option value="Grass">Planta</option>
+          <option value="Ground">Tierra</option>
+          <option value="Ice">Hielo</option>
+          <option value="Normal">Normal</option>
+          <option value="Poison">Veneno</option>
+          <option value="Psychic">Psíquico</option>
+          <option value="Rock">Roca</option>
+          <option value="Water">Agua</option>
+        </select>
+        <input class= "inputNumber" type="text" id= "number" placeholder="Número">
+        <button class= "goButton" type="button" id= "enterNumber">IR</button>
+      </div>
+    </nav>
+    <div class="sortPokemonContainer">
+      <select class="sortPokemon" id="order">
+        <option value="">Ordenar por:</option>
+        <option value="a-z">Nombre, de la A a la Z </option>
+        <option value="z-a">Nombre, de la Z a la A</option>
+        <option value="1-151">Número, de mayor a menor</option>
+        <option value="151-1">Número, de menor a mayor</option>
+      </select>
+    </div>
+    <!--<footer class="footer">
+        <p>2020, Lizeth y Etna para Laboratoria</p>
+      </footer>
+    <div id="root"></div>-->
+>>>>>>> 962161d1f6e5be53adbf08d125fba18925ee20c1
     <script type="module" src="main.js"></script>
   <div id="root">
 
@@ -44,3 +109,121 @@
   </div>
   </body>
 </html>
+//Contenedores de la lista de todos los pokémon
+const displayPokemon = document.createElement("div");
+displayPokemon.className = "displayPokemon";
+document.body.appendChild(displayPokemon);
+
+  const cardsContainer = document.createElement("div");
+  cardsContainer.className = "cardsContainer";
+  cardsContainer.id = "root";
+  displayPokemon.appendChild(cardsContainer);
+
+//Contenedor del perfil de cada pokémon
+const profileContainer = document.createElement("div");
+profileContainer.className = "profileContainer";
+document.body.appendChild(profileContainer);
+
+//Aquí el ciclo para obtener los datos
+data.pokemon.forEach((item) => {
+
+//Aquí las tarjetas de todos los pokémon
+let pokemonCard = document.createElement("div");
+pokemonCard.className = "pokemonCard";
+cardsContainer.appendChild(pokemonCard);
+
+  let imageContainer = document.createElement("div");
+  imageContainer.className = "imageContainer";
+  pokemonCard.appendChild(imageContainer);
+
+    let cardImage = document.createElement("img");
+    cardImage.className = "cardImage";
+    cardImage.src = item.img;
+    imageContainer.appendChild(cardImage);
+
+  let cardNumber = document.createElement("div");
+  cardNumber.className = "cardNumber";
+  cardNumber.textContent = ("No. " + item.num);
+  pokemonCard.appendChild(cardNumber);
+
+  let cardName = document.createElement("div");
+  cardName.className = "cardName";
+  cardName.textContent = item.name;
+  pokemonCard.appendChild(cardName);
+
+//Aquí la tarjeta con el perfil de cada pokémon
+let profileCard = document.createElement("div");
+profileCard.className = "profileCard";
+profileContainer.appendChild(profileCard);
+
+  let profileCardLeft = document.createElement("div");
+  profileCardLeft.className = "profileCardLeft";
+  profileCard.appendChild(profileCardLeft);
+
+    let profileName = document.createElement("div");
+    profileName.className = "profileName";
+    profileName.textContent = item.name;
+    profileCardLeft.appendChild(profileName);
+
+    let profileNumber = document.createElement("div");
+    profileNumber.className = "profileNumber";
+    profileNumber.textContent = ("No. " + item.num);
+    profileCardLeft.appendChild(profileNumber);
+
+    let profileImageContainer = document.createElement("div");
+    profileImageContainer.className = "profileImageContainer";
+    profileCardLeft.appendChild(profileImageContainer);
+
+      let profileImage = document.createElement("img");
+      profileImage.className = "profileImage";
+      profileImage.src = item.img;
+      profileImageContainer.appendChild(profileImage);
+
+  let profileCardRight = document.createElement("div");
+  profileCardRight.className = "profileCardRight";
+  profileCard.appendChild(profileCardRight);
+
+    let closeButton = document.createElement("div");
+    closeButton.className = "closeButton";
+    profileCardRight.appendChild(closeButton);
+
+    let profileEgg = document.createElement("div");
+    profileEgg.className = "profileEgg";
+    profileEgg.textContent = ("Huevo: " + item.egg);
+    profileCardRight.appendChild(profileEgg);
+
+    let profileCandyCount = document.createElement("div");
+    profileCandyCount.className = "profileCandyCount";
+    profileCandyCount.textContent = ("Dulces: " + item.candy_count);
+    profileCardRight.appendChild(profileCandyCount);
+
+    let spawnChanceTitle = document.createElement("div");
+    spawnChanceTitle.className = "spawnChanceTitle";
+    spawnChanceTitle.textContent = "Probabilidad de encontrarlo:";
+    profileCardRight.appendChild(spawnChanceTitle);
+
+      let profileSpawnChance = document.createElement("div");
+      profileSpawnChance.className = "profileSpawnChance";
+      profileSpawnChance.textContent = item.spawn_chance;
+      profileCardRight.appendChild(profileSpawnChance);
+
+    let typeTitle = document.createElement("div");
+    typeTitle.className = "typeTitle";
+    typeTitle.textContent = "Tipo:";
+    profileCardRight.appendChild(typeTitle);
+
+      let profileType = document.createElement("div");
+      profileType.className = "profileType";
+      profileType.textContent = item.type;
+      profileCardRight.appendChild(profileType);
+
+    let weaknessesTitle = document.createElement("div");
+    weaknessesTitle.className = "weaknessesTitle";
+    weaknessesTitle.textContent = "Debilidades:";
+    profileCardRight.appendChild(weaknessesTitle);
+
+      let profileWeaknesses = document.createElement("div");
+      profileWeaknesses.className = "profileWeaknesses";
+      profileWeaknesses.textContent = item.weaknesses;
+      profileCardRight.appendChild(profileWeaknesses);
+});

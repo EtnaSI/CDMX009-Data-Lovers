@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css?family=Saira+Condensed&display=swap');
+
+*{
+  width: 100%;
+  margin: 0;
+}
+header {
+  background: url(./imagenes/imagenHeaderPokemon.jpeg);
+  background-position: center;
+  background-attachment: contain;
+  background-size: cover;
+  display: flex;
+  width: 100%;
+  height: 20%;
+  justify-content: center;
+}
+  .logo{
+    display: flex;
+    align-self: center;
+    width: 400px;
+    height: auto;
+}
+.searchContainer {
+  width: 100%;
+  height: 80px;
+  background: #4F4F52;
+  display: flex;
+  justify-content: center;
+}
+  .searchItems{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+    width: 80%;
+    }
+    .instruction {
+      color: #E5E5E5;
+      font-size: 35px;
+      font-family: Saira Condensed;
+    }
+    .type, .weaknesses{
+      border-radius: 5px;
+      border: 2px solid #E5E5E5;
+      font-size: 25px;
+      font-family: Saira Condensed;
+      color: #314F8B;
+      margin: 3%;
+}
+    .goButton {
+      background: #E5E5E5;
+      border-radius: 100px;
+      font-family: Saira Condensed;
+      font-size: 25px;
+      color: #314F8B;
+      font-weight: bold;
+      text-decoration: none;
+      width: 200px;
+}
+    .inputNumber {
+      width: auto;
+      height: 30px;
+      border-radius: 5px;
+      border: 2px solid #E5E5E5;
+      font-size: 25px;
+      font-family: Saira Condensed;
+      color: #314F8B;
+      margin: 3%;
+}
+.sortPokemonContainer{
+  width: 80%;
+  height: auto;
+  background: #4F4F52;
+  display: flex;
+  justify-content: center;
+}
+    .sortPokemon{
+      width: 200px;
+      color: #314F8B;
+      border: 2px solid #E5E5E5;
+      font-size: 25px;
+      font-family: Saira Condensed;
+      display: flex;
+      align-items: center;
+    }
+.displayPokemon{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  align-items: center;
+  align-content: space-around;
+}
+  .cardsContainer{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: center;
+    align-content: space-around;
+    margin-top: 3%;
+  }
+.pokemonCard{
+    margin: 2.5% 0% 2.5% 0%;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 350px;
+    background: #E5E5E5;
+    border-radius: 10%;
+}
+  .imageContainer{
+    width: 200px;
+    height: auto;
+    align-self: center;
+    margin-top:10%;
+  }
+    .cardImage{
+      align-self: center;
+    }
+    .cardNumber{
+      align-self: flex-start;
+      color: #646671;
+      font-size: 25px;
+      font-weight: bold;
+      font-family: Saira Condensed;
+      margin-left: 10%;
+    }
+    .cardName{
+      align-self: flex-start;
+      color: #3B3B3C;
+      font-size: 30px;
+      font-weight: bolder;
+      font-family: Saira Condensed;
+      margin-left: 10%;
+    }
+.profileContainer{
+  display: flex;
+  flex-direction: column;
+  }
+.profileCard{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 750px;
+  height: 500px;
+  background: #E5E5E5;
+  border-radius: 10%;
+  margin-top: 5%;
+}
+.profileCardLeft{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 350px;
+  height: auto;
+}
+  .profileName{
+    color: #3B3B3C;
+    font-size: 50px;
+    font-weight: bolder;
+    font-family: Saira Condensed;
+    margin: 10% 0% 0% 15%;
+  }
+  .profileNumber{
+    color: #646671;
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: Saira Condensed;
+    margin: 0% 0% 0% 15%;
+  }
+  .profileImageContainer{
+    display: flex;
+    width: 270px;
+    height: 270px;
+    background: #ffff;
+    border-radius: 10%;
+    margin: 5% 0% 0% 15%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+  .profileImage {
+    width: 200px;
+    height: auto;
+    align-self: center;
+}
+.profileCardRight{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 400px;
+  height: auto;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+  .closeButton{
+    height: 20px;
+    width: auto;
+    background: #fff;
+  }
+  .spawnChanceTitle, .typeTitle, .weaknessesTitle{
+    align-self: flex-start;
+    color: #3B3B3C;
+    font-size: 27px;
+    font-weight: bolder;
+    font-family: Saira Condensed;
+    margin-left: 5%;
+    margin-top: 3%;
+  }
+    .profileEgg, .profileCandyCount, .profileSpawnChance, .profileType, .profileWeaknesses{
+      align-self: flex-start;
+      color: #646671;
+      font-size: 27px;
+      font-weight: lighter;
+      font-family: Saira Condensed;
+      margin-left: 5%;
+    }
+
+/*.footer {
+  width: 100%;
+  background: #4F4F52;
+  height: 80px;
+  align-self: flex-end;
+}
+
+  footer p {
+    font-size: 25px;
+    text-align: center;
+    color: #E5E5E5;
+    font-family: Saira Condensed;
+}*/
