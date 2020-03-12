@@ -133,6 +133,36 @@ profileContainer.appendChild(profileCard);
       profileWeaknesses.textContent = data.weaknesses;
       profileCardRight.appendChild(profileWeaknesses);
 
+      //CREANDO EVENTO ABRIR POPUP
+let eventImag = document.getElementsByClassName('cardImage')
+let eventImages = eventImag[eventImag.length -1];
+console.log(eventImages);
+eventImages.addEventListener('click',abrirPopup)
+let overlay = document.querySelector('#profileContainer')//el id lo tiene el overlay
+let popup =  document.getElementsByClassName('profileCard')
+let newPopup = popup[popup.length-1];
+console.log(newPopup);
+let btnClosePopup = document.getElementsByClassName('btn-cerrar-popup')
+let newBtnClose = btnClosePopup[btnClosePopup.length-1];
+console.log(newBtnClose);
+
+newBtnClose.addEventListener('click', cerrarPopup)
+
+
+function abrirPopup(){
+
+     overlay.classList.add('active')
+     newPopup.classList.add('active')
+
+
+     }
+ function cerrarPopup(){
+    overlay.classList.remove('active')
+    newPopup.classList.remove('active')
+
+
+     }
+
 
 })
 
@@ -634,33 +664,7 @@ function limpiar(){
   document.getElementById("root").innerHTML = ""
 }
 
-//CREANDO EVENTO ABRIR POPUP
-let eventImag = document.getElementsByClassName('cardImage')
-let eventImages = eventImag[eventImag.length-1];
-//console.log(eventImages);
-eventImages.addEventListener('click',abrirPopup)
-let overlay = document.querySelector('#profileContainer')//el id lo tiene el overlay
-let popup =  document.getElementsByClassName('profileCard')
-let newPopup = popup[popup.length-1];
-console.log(newPopup);
-let btnClosePopup = document.getElementsByClassName('btn-cerrar-popup')
-let newBtnClose = btnClosePopup[btnClosePopup.length-1];
-newBtnClose.addEventListener('click', cerrarPopup)
 
-
-function abrirPopup(){
-
-     overlay.classList.add('active')
-     newPopup.classList.add('active')
-
-
-     }
- function cerrarPopup(){
-    overlay.classList.remove('active')
-    newPopup.classList.remove('active')
-
-
-     }
 
 
 //let pokemon = ""
