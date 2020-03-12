@@ -68,11 +68,10 @@ header {
       margin: 3%;
 }
 .sortPokemonContainer{
-  width: 80%;
+  width: 87%;
   height: auto;
-  background: #4F4F52;
   display: flex;
-  justify-content: center;
+  justify-content:flex-end;
 }
     .sortPokemon{
       width: 200px;
@@ -81,7 +80,7 @@ header {
       font-size: 25px;
       font-family: Saira Condensed;
       display: flex;
-      align-items: center;
+      margin-top: 3%;
     }
 .displayPokemon{
   display: flex;
@@ -218,8 +217,7 @@ header {
       font-family: Saira Condensed;
       margin-left: 5%;
     }
-
-/*.footer {
+/*footer {
   width: 100%;
   background: #4F4F52;
   height: 80px;
