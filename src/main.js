@@ -1,11 +1,6 @@
 import pokemon from './data/pokemon/pokemon.js';
 import  data from './data.js'
 
-//console.log(pokemon);
-
-//for (var i = 0; i < pokemon.length; i++) { //Recorrer todos los arrays y que no los muestre
-  //console.log(pokemon[i])
-//}
 //Contenedores de la lista de todos los pokémon
 const displayPokemon = document.createElement("div");
 displayPokemon.className = "displayPokemon";
@@ -17,8 +12,7 @@ document.body.appendChild(displayPokemon);
 
 pokemon.forEach(data => {
 
-  //console.log(data);
-  //Aquí las tarjetas de todos los pokémon
+//Aquí las tarjetas de todos los pokémon
 let pokemonCard = document.createElement("div");
 pokemonCard.className = "pokemonCard";
 cardsContainer.appendChild(pokemonCard);
@@ -43,7 +37,6 @@ cardsContainer.appendChild(pokemonCard);
   pokemonCard.appendChild(cardName);
 
 //Aquí la tarjeta con el perfil de cada pokémon
-//Contenedor del perfil de cada pokémon
 const profileContainer = document.createElement("div");
 profileContainer.className = "profileContainer";
 profileContainer.id = "profileContainer";
@@ -84,12 +77,13 @@ profileContainer.appendChild(profileCard);
     closeButton.className = "closeButton";
     profileCardRight.appendChild(closeButton);
 
-    let close = document.createElement('a')
-    close.className = 'btn-cerrar-popup'
-    closeButton.appendChild(close)
-    let icon = document.createElement('i')
-    icon.className = "far fa-times-circle"
-    close.appendChild(icon)
+      let close = document.createElement('a')
+      close.className = 'btn-cerrar-popup'
+      closeButton.appendChild(close)
+
+      let icon = document.createElement('i')
+      icon.className = "far fa-times-circle"
+      close.appendChild(icon)
 
     let profileEgg = document.createElement("div");
     profileEgg.className = "profileEgg";
@@ -131,38 +125,30 @@ profileContainer.appendChild(profileCard);
       profileWeaknesses.textContent = data.weaknesses;
       profileCardRight.appendChild(profileWeaknesses);
 
-      //CREANDO EVENTO ABRIR POPUP
+      //Evento para popup de tajetas del perfil de cada pokemon
       let eventImag = document.getElementsByClassName('cardImage')
       let eventImages = eventImag[eventImag.length-1];
       //console.log(eventImages);
       eventImages.addEventListener('click',abrirPopup)
-      let overlay = document.querySelector('#profileContainer')//el id lo tiene el overlay
-      let popup =  document.getElementsByClassName('profileCard')
+      let overlay = document.querySelector('#profileContainer');
+      let popup =  document.getElementsByClassName('profileCard');
       let newPopup = popup[popup.length-1];
       //console.log(newPopup);
-      let btnClosePopup = document.getElementsByClassName('btn-cerrar-popup')
+      let btnClosePopup = document.getElementsByClassName('btn-cerrar-popup');
       let newBtnClose = btnClosePopup[btnClosePopup.length-1];
-      newBtnClose.addEventListener('click', cerrarPopup)
-
+      newBtnClose.addEventListener('click', cerrarPopup);
 
       function abrirPopup(){
-
-           overlay.classList.add('active')
-           newPopup.classList.add('active')
-
-
+        overlay.classList.add('active')
+        newPopup.classList.add('active')
            }
        function cerrarPopup(){
           overlay.classList.remove('active')
           newPopup.classList.remove('active')
-
-
            }
-})
-
-
+});
+//Buscar por nombre
 let searchNumber = 0
-
 
 let save = document.querySelector('#enterNumber')
 save.addEventListener('click', saveNumber)
@@ -173,7 +159,7 @@ function saveNumber(){
   let numberResult = data.saveNumber(searchNumber)
   console.log(numberResult);
 
-  //Aquí las tarjetas de todos los pokémon
+//Aquí las tarjetas de todos los pokémon
 let pokemonCard = document.createElement("div");
 pokemonCard.className = "pokemonCard";
 cardsContainer.appendChild(pokemonCard);
@@ -198,7 +184,6 @@ cardsContainer.appendChild(pokemonCard);
   pokemonCard.appendChild(cardName);
 
 //Aquí la tarjeta con el perfil de cada pokémon
-//Contenedor del perfil de cada pokémon
 const profileContainer = document.createElement("div");
 profileContainer.className = "profileContainer";
 profileContainer.id = "profileContainer";
@@ -286,7 +271,7 @@ profileContainer.appendChild(profileCard);
       profileWeaknesses.textContent = numberResult.weaknesses;
       profileCardRight.appendChild(profileWeaknesses);
 
-      //CREANDO EVENTO ABRIR POPUP
+      //Evento para popup
       let eventImag = document.getElementsByClassName('cardImage')
       let eventImages = eventImag[eventImag.length-1];
       //console.log(eventImages);
@@ -299,25 +284,15 @@ profileContainer.appendChild(profileCard);
       let newBtnClose = btnClosePopup[btnClosePopup.length-1];
       newBtnClose.addEventListener('click', cerrarPopup)
 
-
       function abrirPopup(){
-
            overlay.classList.add('active')
            newPopup.classList.add('active')
-
-
            }
        function cerrarPopup(){
           overlay.classList.remove('active')
           newPopup.classList.remove('active')
-
-
            }
-
 }
-
-
-
 let typeSelect = document.querySelector('#type')
 typeSelect.addEventListener('change', showType)
 
@@ -329,7 +304,8 @@ function showType(){
   console.log(type);
   type.forEach(typeElement => {
     console.log(typeElement);
-     //Aquí las tarjetas de todos los pokémon
+
+//Aquí las tarjetas de todos los pokémon
 let pokemonCard = document.createElement("div");
 pokemonCard.className = "pokemonCard";
 cardsContainer.appendChild(pokemonCard);
@@ -354,7 +330,6 @@ cardsContainer.appendChild(pokemonCard);
   pokemonCard.appendChild(cardName);
 
 //Aquí la tarjeta con el perfil de cada pokémon
-//Contenedor del perfil de cada pokémon
 const profileContainer = document.createElement("div");
 profileContainer.className = "profileContainer";
 profileContainer.id = "profileContainer";
@@ -442,7 +417,7 @@ profileContainer.appendChild(profileCard);
       profileWeaknesses.textContent = typeElement.weaknesses;
       profileCardRight.appendChild(profileWeaknesses);
 
-      //CREANDO EVENTO ABRIR POPUP
+      //Evento para abrir popup
       let eventImag = document.getElementsByClassName('cardImage')
       let eventImages = eventImag[eventImag.length-1];
       //console.log(eventImages);
@@ -455,25 +430,16 @@ profileContainer.appendChild(profileCard);
       let newBtnClose = btnClosePopup[btnClosePopup.length-1];
       newBtnClose.addEventListener('click', cerrarPopup)
 
-
       function abrirPopup(){
-
-           overlay.classList.add('active')
-           newPopup.classList.add('active')
-
-
-           }
+        overlay.classList.add('active')
+        newPopup.classList.add('active')
+        }
        function cerrarPopup(){
           overlay.classList.remove('active')
           newPopup.classList.remove('active')
-
-
            }
   });
 }
-
-
-
 let weaknessesSelect = document.querySelector('#weaknesses')
 weaknessesSelect.addEventListener('change',showWeaknesses)
 
@@ -485,7 +451,8 @@ weaknessesSelect.addEventListener('change',showWeaknesses)
     console.log(weaknesses);
     weaknesses.forEach(weaknessesElement =>{
       console.log(weaknessesElement);
-    //Aquí las tarjetas de todos los pokémon
+
+//Aquí las tarjetas de todos los pokémon
 let pokemonCard = document.createElement("div");
 pokemonCard.className = "pokemonCard";
 cardsContainer.appendChild(pokemonCard);
@@ -509,12 +476,11 @@ cardsContainer.appendChild(pokemonCard);
   cardName.textContent = weaknessesElement.name;
   pokemonCard.appendChild(cardName);
 
-  //Aquí la tarjeta con el perfil de cada pokémon
-  //Contenedor del perfil de cada pokémon
-  const profileContainer = document.createElement("div");
-  profileContainer.className = "profileContainer";
-  profileContainer.id = "profileContainer";
-  document.body.appendChild(profileContainer);
+//Aquí la tarjeta con el perfil de cada pokémon
+const profileContainer = document.createElement("div");
+profileContainer.className = "profileContainer";
+profileContainer.id = "profileContainer";
+document.body.appendChild(profileContainer);
 
 let profileCard = document.createElement("div");
 profileCard.className = "profileCard";
@@ -611,26 +577,16 @@ profileContainer.appendChild(profileCard);
       let newBtnClose = btnClosePopup[btnClosePopup.length-1];
       newBtnClose.addEventListener('click', cerrarPopup)
 
-
       function abrirPopup(){
-
            overlay.classList.add('active')
            newPopup.classList.add('active')
-
-
            }
        function cerrarPopup(){
           overlay.classList.remove('active')
           newPopup.classList.remove('active')
-
-
            }
-
     })
-
   }
-
-
 
 let orderNum = document.querySelector('#order')
 orderNum.addEventListener('change', orderNumber)
@@ -643,7 +599,8 @@ function orderNumber(){
   console.log(orderAs)
   orderAs.forEach(numOrderElement =>{
     console.log(numOrderElement);
-     //Aquí las tarjetas de todos los pokémon
+
+//Aquí las tarjetas de todos los pokémon
 let pokemonCard = document.createElement("div");
 pokemonCard.className = "pokemonCard";
 cardsContainer.appendChild(pokemonCard);
@@ -667,13 +624,12 @@ cardsContainer.appendChild(pokemonCard);
   cardName.textContent = numOrderElement.name;
   pokemonCard.appendChild(cardName);
 
-  //Aquí la tarjeta con el perfil de cada pokémon
-  //Contenedor del perfil de cada pokémon
-  const profileContainer = document.createElement("div");
-  profileContainer.className = "profileContainer";
-  profileContainer.id = "profileContainer";
-  document.body.appendChild(profileContainer);
-  
+//Aquí la tarjeta con el perfil de cada pokémon
+const profileContainer = document.createElement("div");
+profileContainer.className = "profileContainer";
+profileContainer.id = "profileContainer";
+document.body.appendChild(profileContainer);
+
 let profileCard = document.createElement("div");
 profileCard.className = "profileCard";
 profileContainer.appendChild(profileCard);
@@ -755,7 +711,7 @@ profileContainer.appendChild(profileCard);
       profileWeaknesses.className = "profileWeaknesses";
       profileWeaknesses.textContent = numOrderElement.weaknesses;
       profileCardRight.appendChild(profileWeaknesses);
-      //CREANDO EVENTO ABRIR POPUP
+      //Evento popup
       let eventImag = document.getElementsByClassName('cardImage')
       let eventImages = eventImag[eventImag.length-1];
       //console.log(eventImages);
@@ -768,29 +724,19 @@ profileContainer.appendChild(profileCard);
       let newBtnClose = btnClosePopup[btnClosePopup.length-1];
       newBtnClose.addEventListener('click', cerrarPopup)
 
-
       function abrirPopup(){
-
            overlay.classList.add('active')
            newPopup.classList.add('active')
-
-
            }
        function cerrarPopup(){
           overlay.classList.remove('active')
           newPopup.classList.remove('active')
-
-
            }
   })
-
 }
 function limpiar(){
   document.getElementById("root").innerHTML = ""
-}
-
-
-
+};
 
 //let pokemon = ""
 //fetch('./data/pokemon/pokemon.json')
