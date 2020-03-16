@@ -1,6 +1,6 @@
-# Data Lovers
+# Pokémon Data Lovers
 
-Pokémon Data Lovers es un sitio web donde los usuarios del videojuego Pokémon GO pueden consultar infoemción sobre todos los pokémon de la generación Kanto.
+Pokémon Data Lovers es un sitio web donde los usuarios del videojuego Pokémon GO pueden consultar información sobre todos los pokémon de la generación Kanto.
 
 ## Proceso de diseño
 
@@ -16,19 +16,19 @@ Presentamos el prototipo a jugadores reales de Pokémon GO, y nos reportaron lo 
 
 ### Prototipo de baja fidelidad
 
-![](imagenes/prototipoBajaFidelidad.png)
+![](./imagenes/prototipoBajaFidelidad.png)
 
 ### Prototipo de alta fidelidad
 
-![](imagenes/prototipoAltaFidelidad.png)
+![](./imagenes/prototipoAltaFidelidad.png)
 
 ## Historias de usuario
 
-![](imagenes/historiasDeUsuario1.png)
-![](imagenes/historiasDeUsuario2.png)
-![](imagenes/historiasDeUsuario3.png)
-![](imagenes/historiasDeUsuario4.png)
-![](imagenes/historiasDeUsuario5.png)
+![](./imagenes/historiasDeUsuario1.png)
+![](./imagenes/historiasDeUsuario2.png)
+![](./imagenes/historiasDeUsuario3.png)
+![](./imagenes/historiasDeUsuario4.png)
+![](./imagenes/historiasDeUsuario5.png)
 
 ## Objetivos de aprendizaje
 
@@ -75,6 +75,3 @@ Presentamos el prototipo a jugadores reales de Pokémon GO, y nos reportaron lo 
 - [X] Organizar y dividir el código en módulos (Modularización).
 - [X] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
 - [ ] Utilizar linter para seguir buenas prácticas (ESLINT).
-
-
-
