@@ -1,4 +1,4 @@
-# Data Lovers
+# Pokémon Data Lovers
 
 Pokémon Data Lovers es un sitio web donde los usuarios del videojuego Pokémon GO pueden consultar información sobre todos los pokémon de la generación Kanto.
 
