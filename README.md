@@ -16,19 +16,19 @@ Presentamos el prototipo a jugadores reales de Pokémon GO, y nos reportaron lo 
 
 ### Prototipo de baja fidelidad
 
-![](imagenes/prototipos/prototipoBajaFidelidad.png)
+![](imagenes/prototipoBajaFidelidad.png)
 
 ### Prototipo de alta fidelidad
 
-![](imagenes/prototipos/prototipoAltaFidelidad.png)
+![](imagenes/prototipoAltaFidelidad.png)
 
 ## Historias de usuario
 
-![](imagenes/historiasDeUsuario/1.png)
-![](imagenes/historiasDeUsuario/2.png)
-![](imagenes/historiasDeUsuario/3.png)
-![](imagenes/historiasDeUsuario/4.png)
-![](imagenes/historiasDeUsuario/5.png)
+![](imagenes/historiasDeUsuario1.png)
+![](imagenes/historiasDeUsuario2.png)
+![](imagenes/historiasDeUsuario3.png)
+![](imagenes/historiasDeUsuario4.png)
+![](imagenes/historiasDeUsuario5.png)
 
 ## Objetivos de aprendizaje
 
