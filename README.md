@@ -24,11 +24,6 @@ Presentamos el prototipo a jugadores reales de Pokémon GO, y nos reportaron lo 
 
 ## Historias de usuario
 
-![](imagenes/historiasDeUsuario1.png)
-![](imagenes/historiasDeUsuario2.png)
-![](imagenes/historiasDeUsuario3.png)
-![](imagenes/historiasDeUsuario4.png)
-![](imagenes/historiasDeUsuario5.png)
 
 ## Objetivos de aprendizaje
 
@@ -48,7 +43,7 @@ Presentamos el prototipo a jugadores reales de Pokémon GO, y nos reportaron lo 
 
 ### DOM
 
-- [ ] Entender y reconocer los selectores del DOM (querySelector | querySelectorAll).
+- [X] Entender y reconocer los selectores del DOM (querySelector | querySelectorAll).
 - [X] Manejar eventos del DOM. (addEventListener)
 - [X] Manipular dinámicamente el DOM. (createElement, appendchild, innerHTML, value)
 
