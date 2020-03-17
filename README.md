@@ -16,7 +16,7 @@ Presentamos el prototipo a jugadores reales de Pokémon GO, y nos reportaron lo 
 
 ### Prototipo de baja fidelidad
 
-![](imagenes/prototipoBajaFidelidad.png)
+![prototipoBajaFidelidad](https://github.com/EtnaSI/CDMX009-Data-Lovers/blob/master/src/prototipoBajaFidelidad.png)
 
 ### Prototipo de alta fidelidad
 
