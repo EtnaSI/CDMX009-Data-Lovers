@@ -24,6 +24,7 @@ Presentamos el prototipo a jugadores reales de Pokémon GO, y nos reportaron lo 
 
 ## Historias de usuario
 
+![historiasDeUsuario1-2](https://github.com/EtnaSI/CDMX009-Data-Lovers/blob/master/src/historias1-2.png)
 
 ## Objetivos de aprendizaje
 
