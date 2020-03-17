@@ -16,6 +16,7 @@ Presentamos el prototipo a jugadores reales de Pokémon GO, y nos reportaron lo 
 
 ### Prototipo de baja fidelidad
 
+<<<<<<< HEAD
 ![](./imagenes/prototipoBajaFidelidad.png)
 
 ### Prototipo de alta fidelidad
@@ -29,6 +30,20 @@ Presentamos el prototipo a jugadores reales de Pokémon GO, y nos reportaron lo 
 ![](./imagenes/historiasDeUsuario3.png)
 ![](./imagenes/historiasDeUsuario4.png)
 ![](./imagenes/historiasDeUsuario5.png)
+=======
+![prototipoBajaFidelidad](https://github.com/EtnaSI/CDMX009-Data-Lovers/blob/master/src/prototipoBajaFidelidad.png)
+
+### Prototipo de alta fidelidad
+
+![prototipoAltaFidelidad](https://github.com/EtnaSI/CDMX009-Data-Lovers/blob/master/src/prototipoAltaFidelidad.png)
+
+## Historias de usuario
+
+![historiasDeUsuario1-2](https://github.com/EtnaSI/CDMX009-Data-Lovers/blob/master/src/historiasDeUsuario1-2.png)
+![historiasDeUsuario3-4](https://github.com/EtnaSI/CDMX009-Data-Lovers/blob/master/src/historiasDeUsuario3-4.png)
+![historiasDeUsuario5-6](https://github.com/EtnaSI/CDMX009-Data-Lovers/blob/master/src/historiasDeUsuario5-6.png)
+![historiasDeUsuario7](https://github.com/EtnaSI/CDMX009-Data-Lovers/blob/master/src/historiasDeUsuario7.png)
+>>>>>>> 55a1575030450beb151dec5484f6d14e2aa6de85
 
 ## Objetivos de aprendizaje
 
@@ -37,7 +52,7 @@ Presentamos el prototipo a jugadores reales de Pokémon GO, y nos reportaron lo 
 - [X] Diseñar la aplicación pensando y entendiendo al usuario.
 - [X] Crear prototipos para obtener _feedback_ e iterar.
 - [X] Aplicar los principios de diseño visual (contraste, alineación, jerarquía).
-- [ ] Planear y ejecutar _tests_ de usabilidad.
+- [X] Planear y ejecutar _tests_ de usabilidad.
 
 ### HTML y CSS
 
@@ -48,7 +63,7 @@ Presentamos el prototipo a jugadores reales de Pokémon GO, y nos reportaron lo 
 
 ### DOM
 
-- [ ] Entender y reconocer los selectores del DOM (querySelector | querySelectorAll).
+- [X] Entender y reconocer los selectores del DOM (querySelector | querySelectorAll).
 - [X] Manejar eventos del DOM. (addEventListener)
 - [X] Manipular dinámicamente el DOM. (createElement, appendchild, innerHTML, value)
 
@@ -56,7 +71,7 @@ Presentamos el prototipo a jugadores reales de Pokémon GO, y nos reportaron lo 
 
 - [X] Manipular arrays (`filter` | `map` | `sort` | `reduce`).
 - [X] Manipular objects (key | value).
-- [ ] Entender el uso de condicionales (`if-else` | `switch`).
+- [X] Entender el uso de condicionales (`if-else` | `switch`).
 - [X] Entender el uso de bucles (`for` | `forEach`).
 - [X] Entender la diferencia entre expression y statements.
 - [X] Utilizar funciones (parámetros | argumentos | valor de retorno).
@@ -74,4 +89,11 @@ Presentamos el prototipo a jugadores reales de Pokémon GO, y nos reportaron lo 
 ### Buenas prácticas de desarrollo
 - [X] Organizar y dividir el código en módulos (Modularización).
 - [X] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
+<<<<<<< HEAD
 - [ ] Utilizar linter para seguir buenas prácticas (ESLINT).
+=======
+- [X] Utilizar linter para seguir buenas prácticas (ESLINT).
+
+
+
+>>>>>>> 55a1575030450beb151dec5484f6d14e2aa6de85
