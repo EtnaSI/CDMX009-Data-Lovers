@@ -20,7 +20,7 @@ Presentamos el prototipo a jugadores reales de Pokémon GO, y nos reportaron lo 
 
 ### Prototipo de alta fidelidad
 
-![](imagenes/prototipoAltaFidelidad.png)
+![prototipoAltaFidelidad](https://github.com/EtnaSI/CDMX009-Data-Lovers/blob/master/src/prototipoAltaFidelidad.png)
 
 ## Historias de usuario
 
