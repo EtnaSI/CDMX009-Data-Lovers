@@ -12,20 +12,20 @@ import pokemon from './data/pokemon/pokemon.js';
 
 const data = {
 
-  
+
   saveNumber: (searchNumber)=>{
     let forNumber = ""
     if (searchNumber <= 151) {
       forNumber = pokemon.find(nombre =>nombre.id == searchNumber)
-      
+
     }else{
       alert('Ingresa un número del 1 al 151')
     }
-    
+
     //console.log(forNumber);
     return forNumber
-    
-    
+
+
   },
 
 
@@ -33,13 +33,13 @@ const data = {
 
     let typeFilter = pokemon.filter(item =>{
       return item.type.includes(whatType)
-      
+
     })
 
     return typeFilter
 
   },
-  
+
   showWeaknesses : (pokemon,whatWeaknesses) =>{
     let weaknessesFilter = pokemon.filter(item=>{
       return item.weaknesses.includes(whatWeaknesses)
@@ -49,11 +49,11 @@ const data = {
 
 
   },
-  
+
   orderNumber: (pokemon, saveOrder)=>{
     //console.log(pokemon.sort());
     console.log(saveOrder);
-    
+
     let orderFilter = ""
 
     switch (saveOrder) {
@@ -66,7 +66,7 @@ const data = {
         case "151-1":
         orderFilter= pokemon.sort((a,b)=>{
             return b.id - a.id
-  
+
           })
           break;
         case "a-z":
@@ -74,14 +74,14 @@ const data = {
           if (a.name > b.name) {
             return 1
           }
-              
+
             if (a.name < b.name) {
               return -1;
-              
+
             }
-      
+
           })
-          
+
           break;
         case "z-a":
         orderFilter= pokemon.sort((a,b)=>{
@@ -89,22 +89,22 @@ const data = {
             if (a.name > b.name) {
               return -1
             }
-                
+
             if (a.name < b.name) {
                 return 1;
-                
+
             }
-        
+
             })
           break;
-    
+
       default:
         alert("Elige otra opción")
         break;
     }
-    
+
     return orderFilter;
-    
+
    },
 }
 

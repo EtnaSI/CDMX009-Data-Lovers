@@ -1,27 +1,55 @@
 // importamos la función `example`
-import { example } from "../src/data";
+import { data } from "../src/data";
 
-//describe('example', () => {
-
-  //it('debería ser una función', () => {
-    //expect(typeof example).toBe('function');
-  //});
-
-  //describe('example', () => {
-    // escribe aquí tu test
-  //});
-//});
-const pokemon = arrPokemon()
-describe('SearchNumber', () => {
-  
-  it('pokemon has 1 on it', () => {
-    
-    expect(pokemon.id).toContain('1');
+describe('data', () => {
+  it('should be an object', () => {
+    expect(typeof data).toBe('object');
   });
-});
 
-describe('showType', () => {
-  it('found Fire in pokemon',()=>{
-    expect(pokemon.type).toContain('Fire')
-  })
-});
+  describe('data.saveNumber', () => {
+
+    it('debería ser una función', () => {
+      expect(typeof data.saveNumber).toBe('function');
+    });
+  
+    it('should return 1 for input 1', () => {
+      expect(data.saveNumber(1, 'pokemon')).toContain('1');
+    });
+  });
+
+  describe('data.saveNumber', () => {
+
+    it('debería ser una función', () => {
+      expect(typeof data.saveNumber).toBe('function');
+    });
+  
+    it('should return 1 for input 1', () => {
+      expect(data.saveNumber(1, 'pokemon')).toContain('1');
+    });
+  });
+
+  describe('data.showType', () => {
+
+    it('debería ser una función', () => {
+      expect(typeof data.showType).toBe('function');
+    });
+  
+    it('should return 1 for input 1', () => {
+      expect(data.saveNumber(1, 'pokemon')).toContain('1');
+    });
+
+    
+
+
+  });
+
+
+
+
+
+})
+
+
+
+
+

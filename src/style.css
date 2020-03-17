@@ -7,7 +7,7 @@
 header {
   background: url(./imagenes/imagenHeaderPokemon.jpeg);
   background-position: center;
-  background-attachment: contain;
+  -webkit-background-attachment: contain;
   background-size: cover;
   display: flex;
   width: 100%;
@@ -68,11 +68,10 @@ header {
       margin: 3%;
 }
 .sortPokemonContainer{
-  width: 80%;
+  width: 87%;
   height: auto;
-  background: #4F4F52;
   display: flex;
-  justify-content: center;
+  justify-content:flex-end;
 }
     .sortPokemon{
       width: 200px;
@@ -81,7 +80,7 @@ header {
       font-size: 25px;
       font-family: Saira Condensed;
       display: flex;
-      align-items: center;
+      margin-top: 3%;
     }
 .displayPokemon{
   display: flex;
@@ -138,17 +137,41 @@ header {
 .profileContainer{
   display: flex;
   flex-direction: column;
+  background: rgba(0, 0, 0, .3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
   }
-.profileCard{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 750px;
-  height: 500px;
-  background: #E5E5E5;
-  border-radius: 10%;
-  margin-top: 5%;
+  .active{
+    visibility: visible;
+  }
+  .profileCard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 750px;
+    height: 500px;
+    background: #F8F8F8;
+    border-radius: 90px;
+    margin-top: 5%;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
 }
+  .profileCard .btn-cerrar-popup{
+    font-size: 40px;
+    display: block;
+    text-align: right;
+    transition: .5s ease all;
+    color: #BBB;
+    background-color: #000;
+  }
+  .profileCard .btn-cerrar-popup:hover{
+    color: #000;
+  }
 .profileCardLeft{
   display: flex;
   flex-direction: column;
@@ -174,7 +197,7 @@ header {
     display: flex;
     width: 270px;
     height: 270px;
-    background: #ffff;
+    background: #E5E5E5;
     border-radius: 10%;
     margin: 5% 0% 0% 15%;
     align-items: center;
@@ -218,8 +241,7 @@ header {
       font-family: Saira Condensed;
       margin-left: 5%;
     }
-
-/*.footer {
+/*footer {
   width: 100%;
   background: #4F4F52;
   height: 80px;
