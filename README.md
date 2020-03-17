@@ -37,7 +37,7 @@ Presentamos el prototipo a jugadores reales de Pokémon GO, y nos reportaron lo 
 - [X] Diseñar la aplicación pensando y entendiendo al usuario.
 - [X] Crear prototipos para obtener _feedback_ e iterar.
 - [X] Aplicar los principios de diseño visual (contraste, alineación, jerarquía).
-- [ ] Planear y ejecutar _tests_ de usabilidad.
+- [X] Planear y ejecutar _tests_ de usabilidad.
 
 ### HTML y CSS
 
@@ -56,7 +56,7 @@ Presentamos el prototipo a jugadores reales de Pokémon GO, y nos reportaron lo 
 
 - [X] Manipular arrays (`filter` | `map` | `sort` | `reduce`).
 - [X] Manipular objects (key | value).
-- [ ] Entender el uso de condicionales (`if-else` | `switch`).
+- [X] Entender el uso de condicionales (`if-else` | `switch`).
 - [X] Entender el uso de bucles (`for` | `forEach`).
 - [X] Entender la diferencia entre expression y statements.
 - [X] Utilizar funciones (parámetros | argumentos | valor de retorno).
@@ -74,7 +74,7 @@ Presentamos el prototipo a jugadores reales de Pokémon GO, y nos reportaron lo 
 ### Buenas prácticas de desarrollo
 - [X] Organizar y dividir el código en módulos (Modularización).
 - [X] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
-- [ ] Utilizar linter para seguir buenas prácticas (ESLINT).
+- [X] Utilizar linter para seguir buenas prácticas (ESLINT).
 
 
 
