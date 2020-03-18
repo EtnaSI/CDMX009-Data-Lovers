@@ -28,7 +28,6 @@ Presentamos el prototipo a jugadores reales de Pokémon GO, y nos reportaron lo 
 ![historiasDeUsuario3-4](https://github.com/EtnaSI/CDMX009-Data-Lovers/blob/master/src/historiasDeUsuario3-4.png)
 ![historiasDeUsuario5-6](https://github.com/EtnaSI/CDMX009-Data-Lovers/blob/master/src/historiasDeUsuario5-6.png)
 ![historiasDeUsuario7](https://github.com/EtnaSI/CDMX009-Data-Lovers/blob/master/src/historiasDeUsuario7.png)
->>>>>>> 55a1575030450beb151dec5484f6d14e2aa6de85
 
 ## Objetivos de aprendizaje
 
@@ -74,11 +73,4 @@ Presentamos el prototipo a jugadores reales de Pokémon GO, y nos reportaron lo 
 ### Buenas prácticas de desarrollo
 - [X] Organizar y dividir el código en módulos (Modularización).
 - [X] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
-<<<<<<< HEAD
-- [ ] Utilizar linter para seguir buenas prácticas (ESLINT).
-=======
 - [X] Utilizar linter para seguir buenas prácticas (ESLINT).
-
-
-
->>>>>>> 55a1575030450beb151dec5484f6d14e2aa6de85
