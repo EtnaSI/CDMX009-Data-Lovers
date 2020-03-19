@@ -238,15 +238,18 @@ header {
       font-family: Saira Condensed;
       margin-left: 5%;
     }
-/*footer {
+footer{
+  display: flex;
   width: 100%;
   background: #4F4F52;
   height: 80px;
-  align-self: flex-end;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3%;
 }
   footer p {
     font-size: 25px;
-    text-align: center;
     color: #E5E5E5;
     font-family: Saira Condensed;
-}*/
+    text-align: center;
+}
