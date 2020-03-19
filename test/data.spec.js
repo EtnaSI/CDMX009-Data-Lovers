@@ -128,7 +128,7 @@ escribe('data.orderNumber', () => {
   });
 
   it('should return Bulbasur first and Ivysaur after', () => {
-    expect(pokemon).toHaveProperty('weaknesses', 'Ice');
+    expect(pokemon.id).toBe('1' , '2');
   });
 
 });
