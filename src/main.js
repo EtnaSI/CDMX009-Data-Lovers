@@ -37,7 +37,7 @@ pokemon.forEach(data => {
     <div class="profileName">${data.name}</div>
     <div class="profileNumber">${data.num}</div>
     <div class="profileImageContainer">
-      <img src="${data.img}" alt=""> 
+      <img src="${data.img}" alt="">
     </div>
   </div>
   <div class="profileCardRight">
@@ -65,6 +65,7 @@ pokemon.forEach(data => {
   close.appendChild(icon);
 
 
+<<<<<<< HEAD
   // CREANDO EVENTO ABRIR POPUP
   const eventImag = document.querySelectorAll('.cardImage');    
   const eventImages = eventImag[eventImag.length -1];
@@ -74,10 +75,22 @@ pokemon.forEach(data => {
   const popup = document.querySelectorAll('.profileCard');
   const newPopup = popup[popup.length -1];
   // console.log(newPopup);
+=======
+  //CREANDO EVENTO ABRIR POPUP
+  const eventImag = document.querySelectorAll('.cardImage');
+  const eventImages = eventImag[eventImag.length-1];
+  //console.log(eventImages);
+  eventImages.addEventListener('click',abrirPopup);
+  const overlay = document.querySelector('#profileContainer'); //el id lo tiene el overlay
+  const popup =  document.querySelectorAll('.profileCard');
+  const newPopup = popup[popup.length-1];
+  //console.log(newPopup);
+>>>>>>> 421f762104792e5a17f0d791ac82f40c463856c0
   const btnClosePopup = document.querySelectorAll('.btn-cerrar-popup');
   const newBtnClose = btnClosePopup[btnClosePopup.length -1];
   newBtnClose.addEventListener('click', cerrarPopup);
 
+<<<<<<< HEAD
   function abrirPopup() {
     overlay.classList.add('active');
     newPopup.classList.add('active');
@@ -86,6 +99,16 @@ pokemon.forEach(data => {
     overlay.classList.remove('active');
     newPopup.classList.remove('active');
     }
+=======
+   function abrirPopup(){
+     overlay.classList.add('active');
+     newPopup.classList.add('active');
+    };
+   function cerrarPopup(){
+      overlay.classList.remove('active');
+      newPopup.classList.remove('active');
+    };
+>>>>>>> 421f762104792e5a17f0d791ac82f40c463856c0
 });
 
 // BUSCAR POR NÚMERO
@@ -106,11 +129,11 @@ function saveNumber() {
      <div class="cardName">${numberResult.name}</div>
  `;
   document.getElementById('root').appendChild(pokemonCard);
- 
+
   const imageContainer = document.createElement("div");
   imageContainer.className = "imageContainer";
   pokemonCard.appendChild(imageContainer);
- 
+
   const cardImage = document.createElement("img");
   cardImage.className = "cardImage";
   cardImage.src = numberResult.img;
@@ -121,16 +144,16 @@ function saveNumber() {
   profileContainer.className = "profileContainer";
   profileContainer.id = "profileContainer";
   document.body.appendChild(profileContainer);
- 
+
   const profileCard = document.createElement("div");
   profileCard.className = "profileCard";
   profileCard.innerHTML = `
- 
+
   <div class="profileCardLeft">
    <div class="profileName">${numberResult.name}</div>
    <div class="profileNumber">${numberResult.num}</div>
    <div class="profileImageContainer">
-       <img src="${numberResult.img}" alt=""> 
+       <img src="${numberResult.img}" alt="">
    </div>
   </div>
   <div class="profileCardRight">
@@ -145,18 +168,18 @@ function saveNumber() {
   </div>
   `
   profileContainer.appendChild(profileCard);
- 
+
   const closeButton = document.createElement("div");
   closeButton.className = "closeButton";
   profileCard.appendChild(closeButton);
- 
+
   const close = document.createElement('a');
   close.className = 'btn-cerrar-popup';
   closeButton.appendChild(close);
   const icon = document.createElement('i')
   icon.className = "far fa-times-circle";
   close.appendChild(icon);
- 
+
   //CREANDO EVENTO ABRIR POPUP
   let eventImag = document.querySelectorAll('.cardImage');
   let eventImages = eventImag[eventImag.length-1];
@@ -196,33 +219,33 @@ function showType(){
      pokemonCard.className = "pokemonCard";
      pokemonCard.innerHTML = `
          <div class="cardNumber"> No. ${typeElement.num}</div>
-         <div class="cardName">${typeElement.name}</div>     
+         <div class="cardName">${typeElement.name}</div>
      `;
      document.getElementById('root').appendChild(pokemonCard);
-     
+
      const imageContainer = document.createElement("div");
      imageContainer.className = "imageContainer";
      pokemonCard.appendChild(imageContainer);
-     
+
      const cardImage = document.createElement("img");
      cardImage.className = "cardImage";
      cardImage.src = typeElement.img;
-     imageContainer.appendChild(cardImage);   
+     imageContainer.appendChild(cardImage);
      //Aquí la tarjeta con el perfil de cada pokémon
      const profileContainer = document.createElement("div");
      profileContainer.className = "profileContainer";
      profileContainer.id = "profileContainer";
      document.body.appendChild(profileContainer);
-     
+
      const profileCard = document.createElement("div");
      profileCard.className = "profileCard";
      profileCard.innerHTML = `
-     
+
      <div class="profileCardLeft">
        <div class="profileName">${typeElement.name}</div>
        <div class="profileNumber">${typeElement.num}</div>
        <div class="profileImageContainer">
-           <img src="${typeElement.img}" alt=""> 
+           <img src="${typeElement.img}" alt="">
        </div>
      </div>
      <div class="profileCardRight">
@@ -234,27 +257,27 @@ function showType(){
        <div class="profileType">${typeElement.type}</div>
        <div class="weaknessesTitle">Debilidades:</div>
        <div class="profileWeaknesses">${typeElement.weaknesses}</div>
-     </div>     
+     </div>
      `
      profileContainer.appendChild(profileCard);
-         
+
      const closeButton = document.createElement("div");
      closeButton.className = "closeButton";
      profileCard.appendChild(closeButton);
-     
+
      const close = document.createElement('a');
      close.className = 'btn-cerrar-popup';
      closeButton.appendChild(close);
      const icon = document.createElement('i')
      icon.className = "far fa-times-circle";
      close.appendChild(icon);
-     
+
     //CREANDO EVENTO ABRIR POPUP
     let eventImag = document.querySelectorAll('.cardImage');
     let eventImages = eventImag[eventImag.length-1];
     eventImages.addEventListener('click',abrirPopup);
     let overlay = document.querySelector('#profileContainer'); //el id lo tiene el overlay
-    let popup =  document.querySelectorAll('.profileCard'); 
+    let popup =  document.querySelectorAll('.profileCard');
     let newPopup = popup[popup.length-1];
     let btnClosePopup = document.querySelectorAll('.btn-cerrar-popup');
     let newBtnClose = btnClosePopup[btnClosePopup.length-1];
@@ -287,38 +310,38 @@ weaknessesSelect.addEventListener('change',showWeaknesses);
     pokemonCard.className = "pokemonCard";
     pokemonCard.innerHTML = `
         <div class="cardNumber"> No. ${weaknessesElement.num}</div>
-        <div class="cardName">${weaknessesElement.name}</div>    
+        <div class="cardName">${weaknessesElement.name}</div>
     `;
     document.getElementById('root').appendChild(pokemonCard);
-    
+
     const imageContainer = document.createElement("div");
     imageContainer.className = "imageContainer";
     pokemonCard.appendChild(imageContainer);
-    
+
     const cardImage = document.createElement("img");
     cardImage.className = "cardImage";
     cardImage.src = weaknessesElement.img;
-    imageContainer.appendChild(cardImage);   
+    imageContainer.appendChild(cardImage);
     //pokemonCard += pokeCard
     //Aquí la tarjeta con el perfil de cada pokémon
     const profileContainer = document.createElement("div");
     profileContainer.className = "profileContainer";
     profileContainer.id = "profileContainer";
     document.body.appendChild(profileContainer);
-    
+
     const profileCard = document.createElement("div");
     profileCard.className = "profileCard";
     profileCard.innerHTML = `
-    
+
     <div class="profileCardLeft">
       <div class="profileName">${weaknessesElement.name}</div>
       <div class="profileNumber">${weaknessesElement.num}</div>
       <div class="profileImageContainer">
-          <img src="${weaknessesElement.img}" alt=""> 
+          <img src="${weaknessesElement.img}" alt="">
       </div>
     </div>
     <div class="profileCardRight">
-    
+
       <div class="profileEgg">Huevo: ${weaknessesElement.egg}</div>
       <div class="profileCandyCount">Dulces: ${weaknessesElement.candy_count}</div>
       <div class="spawnChanceTitle">Probabilidad de encontrarlo:</div>
@@ -327,14 +350,14 @@ weaknessesSelect.addEventListener('change',showWeaknesses);
       <div class="profileType">${weaknessesElement.type}</div>
       <div class="weaknessesTitle">Debilidades:</div>
       <div class="profileWeaknesses">${weaknessesElement.weaknesses}</div>
-    </div>   
+    </div>
     `
-    profileContainer.appendChild(profileCard);    
-    
+    profileContainer.appendChild(profileCard);
+
     const closeButton = document.createElement("div");
     closeButton.className = "closeButton";
     profileCard.appendChild(closeButton);
-    
+
     const close = document.createElement('a');
     close.className = 'btn-cerrar-popup';
     closeButton.appendChild(close);
@@ -387,23 +410,23 @@ function orderNumber(){
          <div class="cardName">${numOrderElement.name}</div>
      `;
      document.getElementById('root').appendChild(pokemonCard);
-     
+
      const imageContainer = document.createElement("div");
      imageContainer.className = "imageContainer";
      pokemonCard.appendChild(imageContainer);
-     
+
      const cardImage = document.createElement("img");
      cardImage.className = "cardImage";
      cardImage.src = numOrderElement.img;
-     imageContainer.appendChild(cardImage);     
+     imageContainer.appendChild(cardImage);
      //pokemonCard += pokeCard
      //Aquí la tarjeta con el perfil de cada pokémon
-     
+
      const profileContainer = document.createElement("div");
      profileContainer.className = "profileContainer";
      profileContainer.id = "profileContainer";
      document.body.appendChild(profileContainer);
-     
+
      const profileCard = document.createElement("div");
      profileCard.className = "profileCard";
      profileCard.innerHTML = `
@@ -411,7 +434,7 @@ function orderNumber(){
        <div class="profileName">${numOrderElement.name}</div>
        <div class="profileNumber">${numOrderElement.num}</div>
        <div class="profileImageContainer">
-           <img src="${numOrderElement.img}" alt=""> 
+           <img src="${numOrderElement.img}" alt="">
        </div>
      </div>
      <div class="profileCardRight">
@@ -423,14 +446,14 @@ function orderNumber(){
        <div class="profileType">${numOrderElement.type}</div>
        <div class="weaknessesTitle">Debilidades:</div>
        <div class="profileWeaknesses">${numOrderElement.weaknesses}</div>
-     </div>         
+     </div>
      `
      profileContainer.appendChild(profileCard);
-     
+
      const closeButton = document.createElement("div");
      closeButton.className = "closeButton";
      profileCard.appendChild(closeButton);
-     
+
      const close = document.createElement('a');
      close.className = 'btn-cerrar-popup';
      closeButton.appendChild(close);
@@ -443,7 +466,7 @@ function orderNumber(){
     let eventImages = eventImag[eventImag.length-1];
     eventImages.addEventListener('click',abrirPopup);
     let overlay = document.querySelector('#profileContainer'); //el id lo tiene el overlay
-    let popup =  document.querySelectorAll('.profileCard'); 
+    let popup =  document.querySelectorAll('.profileCard');
     let newPopup = popup[popup.length-1];
     let btnClosePopup = document.querySelectorAll('.btn-cerrar-popup');
     let newBtnClose = btnClosePopup[btnClosePopup.length-1];

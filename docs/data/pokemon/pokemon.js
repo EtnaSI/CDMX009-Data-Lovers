@@ -2703,7 +2703,7 @@
     "id": 96,
     "num": "096",
     "name": "Drowzee",
-    "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/097.png",
+    "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/096.png",
     "type": [
       "Psychic"
     ],
@@ -2732,7 +2732,7 @@
     "id": 97,
     "num": "097",
     "name": "Hypno",
-    "img": "http://www.serebii.net/pokemongo/pokemon/097.png",
+    "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/097.png",
     "type": [
       "Psychic"
     ],

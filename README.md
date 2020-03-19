@@ -57,7 +57,7 @@ Presentamos el prototipo a jugadores reales de Pokémon GO, y nos reportaron lo 
 - [X] Manipular objects (key | value).
 - [X] Entender el uso de condicionales (`if-else` | `switch`).
 - [X] Entender el uso de bucles (`for` | `forEach`).
-- [X] Entender la diferencia entre expression y statements.
+- [ ] Entender la diferencia entre expression y statements.
 - [X] Utilizar funciones (parámetros | argumentos | valor de retorno).
 - [ ] Entender la diferencia entre tipos de datos atómicos y estructurados.
 - [X] Utilizar ES Modules (`import` | `export`).
@@ -74,6 +74,3 @@ Presentamos el prototipo a jugadores reales de Pokémon GO, y nos reportaron lo 
 - [X] Organizar y dividir el código en módulos (Modularización).
 - [X] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
 - [X] Utilizar linter para seguir buenas prácticas (ESLINT).
-
-
-
