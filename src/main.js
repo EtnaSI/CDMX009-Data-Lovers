@@ -1,36 +1,36 @@
 import pokemon from './data/pokemon/pokemon.js';
-import  data from './data.js'
+import data from './data.js';
 
-//console.log(pokemon);
-//APARECEN TODOS LOS POKEMONS AL INICIO
+ // console.log(pokemon);
+ // APARECEN TODOS LOS POKEMONS AL INICIO
 pokemon.forEach(data => {
-  //console.log(data);
-  //Aquí las tarjetas de todos los pokémon
-  const pokemonCard = document.createElement("div");
-  pokemonCard.className = "pokemonCard";
+  // console.log(data);
+  // Aquí las tarjetas de todos los pokémon
+  const pokemonCard = document.createElement('div');
+  pokemonCard.className = 'pokemonCard';
   pokemonCard.innerHTML = `
     <div class="cardNumber"> No. ${data.num}</div>
     <div class="cardName">${data.name}</div>
    `;
   document.querySelector('#root').appendChild(pokemonCard);
 
-  const imageContainer = document.createElement("div");
-  imageContainer.className = "imageContainer";
+  const imageContainer = document.createElement('div');
+  imageContainer.className = 'imageContainer';
   pokemonCard.appendChild(imageContainer);
 
-  const cardImage = document.createElement("img");
-  cardImage.className = "cardImage";
+  const cardImage = document.createElement('img');
+  cardImage.className = 'cardImage';
   cardImage.src = data.img;
   imageContainer.appendChild(cardImage);
-  //pokemonCard += pokeCard
-  //Aquí la tarjeta con el perfil de cada pokémon
-  const profileContainer = document.createElement("div");
-  profileContainer.className = "profileContainer";
-  profileContainer.id = "profileContainer";
+  // pokemonCard += pokeCard
+  // Aquí la tarjeta con el perfil de cada pokémon
+  const profileContainer = document.createElement('div');
+  profileContainer.className = 'profileContainer';
+  profileContainer.id = 'profileContainer';
   document.body.appendChild(profileContainer);
 
-  const profileCard = document.createElement("div");
-  profileCard.className = "profileCard";
+  const profileCard = document.createElement('div');
+  profileCard.className = 'profileCard';
   profileCard.innerHTML = `
 
   <div class="profileCardLeft">
@@ -50,53 +50,53 @@ pokemon.forEach(data => {
     <div class="weaknessesTitle">Debilidades:</div>
     <div class="profileWeaknesses">${data.weaknesses}</div>
   </div>
-  `
+  `;
   profileContainer.appendChild(profileCard);
 
-  const closeButton = document.createElement("div");
-  closeButton.className = "closeButton";
+  const closeButton = document.createElement('div');
+  closeButton.className = 'closeButton';
   profileCard.appendChild(closeButton);
 
   const close = document.createElement('a');
   close.className = 'btn-cerrar-popup';
   closeButton.appendChild(close);
-  const icon = document.createElement('i')
-  icon.className = "far fa-times-circle";
+  const icon = document.createElement('i');
+  icon.className = 'far fa-times-circle';
   close.appendChild(icon);
 
 
-  //CREANDO EVENTO ABRIR POPUP
-  const eventImag = document.querySelectorAll('.cardImage');     
-  const eventImages = eventImag[eventImag.length-1];
-  //console.log(eventImages);
-  eventImages.addEventListener('click',abrirPopup); 
-  const overlay = document.querySelector('#profileContainer'); //el id lo tiene el overlay      
-  const popup =  document.querySelectorAll('.profileCard');
-  const newPopup = popup[popup.length-1];
-  //console.log(newPopup);
+  // CREANDO EVENTO ABRIR POPUP
+  const eventImag = document.querySelectorAll('.cardImage');    
+  const eventImages = eventImag[eventImag.length -1];
+  // console.log(eventImages);
+  eventImages.addEventListener('click', abrirPopup); 
+  const overlay = document.querySelector('#profileContainer');// el id lo tiene el overlay      
+  const popup = document.querySelectorAll('.profileCard');
+  const newPopup = popup[popup.length -1];
+  // console.log(newPopup);
   const btnClosePopup = document.querySelectorAll('.btn-cerrar-popup');
-  const newBtnClose = btnClosePopup[btnClosePopup.length-1];
+  const newBtnClose = btnClosePopup[btnClosePopup.length -1];
   newBtnClose.addEventListener('click', cerrarPopup);
 
-   function abrirPopup(){
-     overlay.classList.add('active');
-     newPopup.classList.add('active');
-    };
-   function cerrarPopup(){
-      overlay.classList.remove('active');
-      newPopup.classList.remove('active');
-    };  
+  function abrirPopup() {
+    overlay.classList.add('active');
+    newPopup.classList.add('active');
+}
+  function cerrarPopup() {
+    overlay.classList.remove('active');
+    newPopup.classList.remove('active');
+    }
 });
 
-//BUSCAR POR NÚMERO
-let searchNumber = 0
-let save = document.querySelector('#enterNumber');
+// BUSCAR POR NÚMERO
+let searchNumber = 0;
+const save = document.querySelector('#enterNumber');
 save.addEventListener('click', saveNumber);
 
-function saveNumber(){
+function saveNumber() {
   limpiar();
   searchNumber = parseInt(document.querySelector('#number').value);
-  let numberResult = data.saveNumber(searchNumber);
+  const numberResult = data.saveNumber(searchNumber);
   console.log(numberResult);
 //Aquí las tarjetas de todos los pokémon
   const pokemonCard = document.createElement("div");
