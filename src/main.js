@@ -1,8 +1,8 @@
 import pokemon from './data/pokemon/pokemon.js';
 import data from './data.js';
 
- // console.log(pokemon);
- // APARECEN TODOS LOS POKEMONS AL INICIO
+// console.log(pokemon);
+// APARECEN TODOS LOS POKEMONS AL INICIO
 pokemon.forEach(data => {
   // console.log(data);
   // Aquí las tarjetas de todos los pokémon
@@ -64,51 +64,27 @@ pokemon.forEach(data => {
   icon.className = 'far fa-times-circle';
   close.appendChild(icon);
 
-
-<<<<<<< HEAD
   // CREANDO EVENTO ABRIR POPUP
-  const eventImag = document.querySelectorAll('.cardImage');    
+  const eventImag = document.querySelectorAll('.cardImage');
   const eventImages = eventImag[eventImag.length -1];
   // console.log(eventImages);
-  eventImages.addEventListener('click', abrirPopup); 
-  const overlay = document.querySelector('#profileContainer');// el id lo tiene el overlay      
+  eventImages.addEventListener('click', abrirPopup);
+  const overlay = document.querySelector('#profileContainer');// el id lo tiene el overlay
   const popup = document.querySelectorAll('.profileCard');
   const newPopup = popup[popup.length -1];
   // console.log(newPopup);
-=======
-  //CREANDO EVENTO ABRIR POPUP
-  const eventImag = document.querySelectorAll('.cardImage');
-  const eventImages = eventImag[eventImag.length-1];
-  //console.log(eventImages);
-  eventImages.addEventListener('click',abrirPopup);
-  const overlay = document.querySelector('#profileContainer'); //el id lo tiene el overlay
-  const popup =  document.querySelectorAll('.profileCard');
-  const newPopup = popup[popup.length-1];
-  //console.log(newPopup);
->>>>>>> 421f762104792e5a17f0d791ac82f40c463856c0
   const btnClosePopup = document.querySelectorAll('.btn-cerrar-popup');
   const newBtnClose = btnClosePopup[btnClosePopup.length -1];
   newBtnClose.addEventListener('click', cerrarPopup);
 
-<<<<<<< HEAD
   function abrirPopup() {
     overlay.classList.add('active');
     newPopup.classList.add('active');
-}
+  }
   function cerrarPopup() {
     overlay.classList.remove('active');
     newPopup.classList.remove('active');
-    }
-=======
-   function abrirPopup(){
-     overlay.classList.add('active');
-     newPopup.classList.add('active');
-    };
-   function cerrarPopup(){
-      overlay.classList.remove('active');
-      newPopup.classList.remove('active');
-    };
->>>>>>> 421f762104792e5a17f0d791ac82f40c463856c0
+  }
 });
 
 // BUSCAR POR NÚMERO
@@ -121,32 +97,31 @@ function saveNumber() {
   searchNumber = parseInt(document.querySelector('#number').value);
   const numberResult = data.saveNumber(searchNumber);
   console.log(numberResult);
-//Aquí las tarjetas de todos los pokémon
-  const pokemonCard = document.createElement("div");
-  pokemonCard.className = "pokemonCard";
+  // Aquí las tarjetas de todos los pokémon
+  const pokemonCard = document.createElement('div');
+  pokemonCard.className = 'pokemonCard';
   pokemonCard.innerHTML = `
      <div class="cardNumber"> No. ${numberResult.num}</div>
      <div class="cardName">${numberResult.name}</div>
  `;
   document.getElementById('root').appendChild(pokemonCard);
 
-  const imageContainer = document.createElement("div");
-  imageContainer.className = "imageContainer";
+  const imageContainer = document.createElement('div');
+  imageContainer.className = 'imageContainer';
   pokemonCard.appendChild(imageContainer);
 
-  const cardImage = document.createElement("img");
-  cardImage.className = "cardImage";
+  const cardImage = document.createElement('img');
+  cardImage.className = 'cardImage';
   cardImage.src = numberResult.img;
   imageContainer.appendChild(cardImage);
-  //pokemonCard += pokeCard
-  //Aquí la tarjeta con el perfil de cada pokémon
-  const profileContainer = document.createElement("div");
-  profileContainer.className = "profileContainer";
-  profileContainer.id = "profileContainer";
+  // Aquí la tarjeta con el perfil de cada pokémon
+  const profileContainer = document.createElement('div');
+  profileContainer.className = 'profileContainer';
+  profileContainer.id = 'profileContainer';
   document.body.appendChild(profileContainer);
 
-  const profileCard = document.createElement("div");
-  profileCard.className = "profileCard";
+  const profileCard = document.createElement('div');
+  profileCard.className = 'profileCard';
   profileCard.innerHTML = `
 
   <div class="profileCardLeft">
@@ -166,80 +141,80 @@ function saveNumber() {
    <div class="weaknessesTitle">Debilidades:</div>
    <div class="profileWeaknesses">${numberResult.weaknesses}</div>
   </div>
-  `
+  `;
   profileContainer.appendChild(profileCard);
 
-  const closeButton = document.createElement("div");
-  closeButton.className = "closeButton";
+  const closeButton = document.createElement('div');
+  closeButton.className = 'closeButton';
   profileCard.appendChild(closeButton);
 
   const close = document.createElement('a');
   close.className = 'btn-cerrar-popup';
   closeButton.appendChild(close);
-  const icon = document.createElement('i')
-  icon.className = "far fa-times-circle";
+  const icon = document.createElement('i');
+  icon.className = 'far fa-times-circle';
   close.appendChild(icon);
 
-  //CREANDO EVENTO ABRIR POPUP
-  let eventImag = document.querySelectorAll('.cardImage');
-  let eventImages = eventImag[eventImag.length-1];
-  eventImages.addEventListener('click',abrirPopup);
-  let overlay = document.querySelector('#profileContainer'); //el id lo tiene el overlay
-  let popup =  document.querySelectorAll('.profileCard');
-  let newPopup = popup[popup.length-1];
-  let btnClosePopup = document.querySelectorAll('.btn-cerrar-popup');
-  let newBtnClose = btnClosePopup[btnClosePopup.length-1];
+  // CREANDO EVENTO ABRIR POPUP
+  const eventImag = document.querySelectorAll('.cardImage');
+  const eventImages = eventImag[eventImag.length -1];
+  eventImages.addEventListener('click', abrirPopup);
+  const overlay = document.querySelector('#profileContainer'); // el id lo tiene el overlay
+  const popup = document.querySelectorAll('.profileCard');
+  const newPopup = popup[popup.length-1];
+  const btnClosePopup = document.querySelectorAll('.btn-cerrar-popup');
+  const newBtnClose = btnClosePopup[btnClosePopup.length -1];
   newBtnClose.addEventListener('click', cerrarPopup);
 
-      function abrirPopup(){
-        overlay.classList.add('active');
-        newPopup.classList.add('active');
-        };
-       function cerrarPopup(){
-          overlay.classList.remove('active');
-          newPopup.classList.remove('active');
-           };
-};
+  function abrirPopup() {
+    overlay.classList.add('active');
+    newPopup.classList.add('active');
+  }
+  function cerrarPopup() {
+    overlay.classList.remove('active');
+    newPopup.classList.remove('active');
+  }
+}
 
 
-//BUSCAR POR TIPO
-let typeSelect = document.querySelector('#type');
+// BUSCAR POR TIPO
+const typeSelect = document.querySelector('#type');
 typeSelect.addEventListener('change', showType);
 
-function showType(){
+function showType() {
   limpiar();
-  let whatType = document.querySelector('#type').value;
-  //console.log(whatType);
-  let type = data.showType(pokemon,whatType);
-  //console.log(type);
+  const whatType = document.querySelector('#type').value;
+  // console.log(whatType);
+  const type = data.showType(pokemon, whatType);
+  // console.log(type);
   type.forEach(typeElement => {
-    //console.log(typeElement);
-     //Aquí las tarjetas de todos los pokémon
-     const pokemonCard = document.createElement("div");
-     pokemonCard.className = "pokemonCard";
-     pokemonCard.innerHTML = `
+    // console.log(typeElement);
+    // Aquí las tarjetas de todos los pokémon
+    const pokemonCard = document.createElement('div');
+    pokemonCard.className = 'pokemonCard';
+    pokemonCard.innerHTML = `
          <div class="cardNumber"> No. ${typeElement.num}</div>
          <div class="cardName">${typeElement.name}</div>
      `;
-     document.getElementById('root').appendChild(pokemonCard);
+    document.getElementById('root').appendChild(pokemonCard);
 
-     const imageContainer = document.createElement("div");
-     imageContainer.className = "imageContainer";
-     pokemonCard.appendChild(imageContainer);
+    const imageContainer = document.createElement('div');
+    imageContainer.className = 'imageContainer';
+    pokemonCard.appendChild(imageContainer);
 
-     const cardImage = document.createElement("img");
-     cardImage.className = "cardImage";
-     cardImage.src = typeElement.img;
-     imageContainer.appendChild(cardImage);
-     //Aquí la tarjeta con el perfil de cada pokémon
-     const profileContainer = document.createElement("div");
-     profileContainer.className = "profileContainer";
-     profileContainer.id = "profileContainer";
-     document.body.appendChild(profileContainer);
+    const cardImage = document.createElement('img');
+    cardImage.className = 'cardImage';
+    cardImage.src = typeElement.img;
+    imageContainer.appendChild(cardImage);
+    // Aquí la tarjeta con el perfil de cada pokémon
+    const profileContainer = document.createElement('div');
+    profileContainer.className = 'profileContainer';
+    profileContainer.id = 'profileContainer';
+    document.body.appendChild(profileContainer);
 
-     const profileCard = document.createElement("div");
-     profileCard.className = "profileCard";
-     profileCard.innerHTML = `
+    const profileCard = document.createElement('div');
+    profileCard.className = 'profileCard';
+    profileCard.innerHTML = `
 
      <div class="profileCardLeft">
        <div class="profileName">${typeElement.name}</div>
@@ -258,81 +233,79 @@ function showType(){
        <div class="weaknessesTitle">Debilidades:</div>
        <div class="profileWeaknesses">${typeElement.weaknesses}</div>
      </div>
-     `
-     profileContainer.appendChild(profileCard);
+     `;
+    profileContainer.appendChild(profileCard);
 
-     const closeButton = document.createElement("div");
-     closeButton.className = "closeButton";
-     profileCard.appendChild(closeButton);
+    const closeButton = document.createElement('div');
+    closeButton.className = 'closeButton';
+    profileCard.appendChild(closeButton);
 
-     const close = document.createElement('a');
-     close.className = 'btn-cerrar-popup';
-     closeButton.appendChild(close);
-     const icon = document.createElement('i')
-     icon.className = "far fa-times-circle";
-     close.appendChild(icon);
+    const close = document.createElement('a');
+    close.className = 'btn-cerrar-popup';
+    closeButton.appendChild(close);
+    const icon = document.createElement('i');
+    icon.className = 'far fa-times-circle';
+    close.appendChild(icon);
 
-    //CREANDO EVENTO ABRIR POPUP
-    let eventImag = document.querySelectorAll('.cardImage');
-    let eventImages = eventImag[eventImag.length-1];
-    eventImages.addEventListener('click',abrirPopup);
-    let overlay = document.querySelector('#profileContainer'); //el id lo tiene el overlay
-    let popup =  document.querySelectorAll('.profileCard');
-    let newPopup = popup[popup.length-1];
-    let btnClosePopup = document.querySelectorAll('.btn-cerrar-popup');
-    let newBtnClose = btnClosePopup[btnClosePopup.length-1];
+    // CREANDO EVENTO ABRIR POPUP
+    const eventImag = document.querySelectorAll('.cardImage');
+    const eventImages = eventImag[eventImag.length-1];
+    eventImages.addEventListener('click', abrirPopup);
+    const overlay = document.querySelector('#profileContainer'); // el id lo tiene el overlay
+    const popup = document.querySelectorAll('.profileCard');
+    const newPopup = popup[popup.length-1];
+    const btnClosePopup = document.querySelectorAll('.btn-cerrar-popup');
+    const newBtnClose = btnClosePopup[btnClosePopup.length-1];
     newBtnClose.addEventListener('click', cerrarPopup);
 
-      function abrirPopup(){
-        overlay.classList.add('active');
-        newPopup.classList.add('active');
-        };
-       function cerrarPopup(){
-          overlay.classList.remove('active');
-          newPopup.classList.remove('active');
-        };
+    function abrirPopup() {
+      overlay.classList.add('active');
+      newPopup.classList.add('active');
+    }
+    function cerrarPopup() {
+      overlay.classList.remove('active');
+      newPopup.classList.remove('active');
+    }
   });
-};
+}
 
 
-//BUSCAR POR DEBILIDAD
-let weaknessesSelect = document.querySelector('#weaknesses');
-weaknessesSelect.addEventListener('change',showWeaknesses);
+// BUSCAR POR DEBILIDAD
+const weaknessesSelect = document.querySelector('#weaknesses');
+weaknessesSelect.addEventListener('change', showWeaknesses);
 
-  function showWeaknesses(){
-    limpiar();
-    let whatWeaknesses = document.querySelector('#weaknesses').value;
-    let weaknesses = data.showWeaknesses(pokemon, whatWeaknesses);
-    weaknesses.forEach(weaknessesElement =>{
-      //console.log(weaknessesElement);
-    //Aquí las tarjetas de todos los pokémon
-    const pokemonCard = document.createElement("div");
-    pokemonCard.className = "pokemonCard";
+function showWeaknesses() {
+  limpiar();
+  const whatWeaknesses = document.querySelector('#weaknesses').value;
+  const weaknesses = data.showWeaknesses(pokemon, whatWeaknesses);
+  weaknesses.forEach(weaknessesElement => {
+  // console.log(weaknessesElement);
+  // Aquí las tarjetas de todos los pokémon
+    const pokemonCard = document.createElement('div');
+    pokemonCard.className = 'pokemonCard';
     pokemonCard.innerHTML = `
         <div class="cardNumber"> No. ${weaknessesElement.num}</div>
         <div class="cardName">${weaknessesElement.name}</div>
     `;
     document.getElementById('root').appendChild(pokemonCard);
 
-    const imageContainer = document.createElement("div");
-    imageContainer.className = "imageContainer";
+    const imageContainer = document.createElement('div');
+    imageContainer.className = 'imageContainer';
     pokemonCard.appendChild(imageContainer);
 
-    const cardImage = document.createElement("img");
-    cardImage.className = "cardImage";
+    const cardImage = document.createElement('img');
+    cardImage.className = 'cardImage';
     cardImage.src = weaknessesElement.img;
     imageContainer.appendChild(cardImage);
-    //pokemonCard += pokeCard
-    //Aquí la tarjeta con el perfil de cada pokémon
-    const profileContainer = document.createElement("div");
-    profileContainer.className = "profileContainer";
-    profileContainer.id = "profileContainer";
+    // Aquí la tarjeta con el perfil de cada pokémon
+    const profileContainer = document.createElement('div');
+    profileContainer.className = 'profileContainer';
+    profileContainer.id = 'profileContainer';
     document.body.appendChild(profileContainer);
 
-    const profileCard = document.createElement("div");
-    profileCard.className = "profileCard";
+    const profileCard = document.createElement('div');
+    profileCard.className = 'profileCard';
     profileCard.innerHTML = `
-
     <div class="profileCardLeft">
       <div class="profileName">${weaknessesElement.name}</div>
       <div class="profileNumber">${weaknessesElement.num}</div>
@@ -341,7 +314,6 @@ weaknessesSelect.addEventListener('change',showWeaknesses);
       </div>
     </div>
     <div class="profileCardRight">
-
       <div class="profileEgg">Huevo: ${weaknessesElement.egg}</div>
       <div class="profileCandyCount">Dulces: ${weaknessesElement.candy_count}</div>
       <div class="spawnChanceTitle">Probabilidad de encontrarlo:</div>
@@ -351,85 +323,82 @@ weaknessesSelect.addEventListener('change',showWeaknesses);
       <div class="weaknessesTitle">Debilidades:</div>
       <div class="profileWeaknesses">${weaknessesElement.weaknesses}</div>
     </div>
-    `
+    `;
     profileContainer.appendChild(profileCard);
 
-    const closeButton = document.createElement("div");
-    closeButton.className = "closeButton";
+    const closeButton = document.createElement('div');
+    closeButton.className = 'closeButton';
     profileCard.appendChild(closeButton);
 
     const close = document.createElement('a');
     close.className = 'btn-cerrar-popup';
     closeButton.appendChild(close);
-    const icon = document.createElement('i')
-    icon.className = "far fa-times-circle";
+    const icon = document.createElement('i');
+    icon.className = 'far fa-times-circle';
     close.appendChild(icon);
 
-    //CREANDO EVENTO ABRIR POPUP
-    let eventImag = document.querySelectorAll('.cardImage');
-    let eventImages = eventImag[eventImag.length-1];
-    eventImages.addEventListener('click',abrirPopup);
-    let overlay = document.querySelector('#profileContainer'); //el id lo tiene el overlay
-    let popup =  document.querySelectorAll('.profileCard');
-    let newPopup = popup[popup.length-1];
-    let btnClosePopup = document.querySelectorAll('.btn-cerrar-popup');
-    let newBtnClose = btnClosePopup[btnClosePopup.length-1];
+    // CREANDO EVENTO ABRIR POPUP
+    const eventImag = document.querySelectorAll('.cardImage');
+    const eventImages = eventImag[eventImag.length-1];
+    eventImages.addEventListener('click', abrirPopup);
+    const overlay = document.querySelector('#profileContainer'); // el id lo tiene el overlay
+    const popup = document.querySelectorAll('.profileCard');
+    const newPopup = popup[popup.length-1];
+    const btnClosePopup = document.querySelectorAll('.btn-cerrar-popup');
+    const newBtnClose = btnClosePopup[btnClosePopup.length-1];
     newBtnClose.addEventListener('click', cerrarPopup);
 
-      function abrirPopup(){
-        overlay.classList.add('active');
-        newPopup.classList.add('active');
-        }
-       function cerrarPopup(){
-          overlay.classList.remove('active');
-          newPopup.classList.remove('active');
-        };
+    function abrirPopup() {
+      overlay.classList.add('active');
+      newPopup.classList.add('active');
+    }
+    function cerrarPopup() {
+      overlay.classList.remove('active');
+      newPopup.classList.remove('active');
+    }
 
-    });
+  });
+}
 
-  };
 
-
-//ORDENAR
-let orderNum = document.querySelector('#order');
+// ORDENAR
+const orderNum = document.querySelector('#order');
 orderNum.addEventListener('change', orderNumber);
 
-function orderNumber(){
+function orderNumber() {
   limpiar();
-  let saveOrder = document.querySelector('#order').value;
-  //console.log(saveOrder);
-  let orderAs = data.orderNumber(pokemon, saveOrder);
-  //console.log(orderAs);
-  orderAs.forEach(numOrderElement =>{
-    //console.log(numOrderElement);
-     //Aquí las tarjetas de todos los pokémon
-     const pokemonCard = document.createElement("div");
-     pokemonCard.className = "pokemonCard";
-     pokemonCard.innerHTML = `
-         <div class="cardNumber"> No. ${numOrderElement.num}</div>
-         <div class="cardName">${numOrderElement.name}</div>
+  const saveOrder = document.querySelector('#order').value;
+  // console.log(saveOrder);
+  const orderAs = data.orderNumber(pokemon, saveOrder);
+  // console.log(orderAs);
+  orderAs.forEach(numOrderElement => {
+    // console.log(numOrderElement);
+    // Aquí las tarjetas de todos los pokémon
+    const pokemonCard = document.createElement('div');
+    pokemonCard.className = 'pokemonCard';
+    pokemonCard.innerHTML = `
+        <div class="cardNumber"> No. ${numOrderElement.num}</div>
+        <div class="cardName">${numOrderElement.name}</div>
      `;
-     document.getElementById('root').appendChild(pokemonCard);
+    document.getElementById('root').appendChild(pokemonCard);
 
-     const imageContainer = document.createElement("div");
-     imageContainer.className = "imageContainer";
-     pokemonCard.appendChild(imageContainer);
+    const imageContainer = document.createElement('div');
+    imageContainer.className = 'imageContainer';
+    pokemonCard.appendChild(imageContainer);
 
-     const cardImage = document.createElement("img");
-     cardImage.className = "cardImage";
-     cardImage.src = numOrderElement.img;
-     imageContainer.appendChild(cardImage);
-     //pokemonCard += pokeCard
-     //Aquí la tarjeta con el perfil de cada pokémon
+    const cardImage = document.createElement('img');
+    cardImage.className = 'cardImage';
+    cardImage.src = numOrderElement.img;
+    imageContainer.appendChild(cardImage);
+    // Aquí la tarjeta con el perfil de cada pokémon
+    const profileContainer = document.createElement('div');
+    profileContainer.className = 'profileContainer';
+    profileContainer.id = 'profileContainer';
+    document.body.appendChild(profileContainer);
 
-     const profileContainer = document.createElement("div");
-     profileContainer.className = "profileContainer";
-     profileContainer.id = "profileContainer";
-     document.body.appendChild(profileContainer);
-
-     const profileCard = document.createElement("div");
-     profileCard.className = "profileCard";
-     profileCard.innerHTML = `
+    const profileCard = document.createElement('div');
+    profileCard.className = 'profileCard';
+    profileCard.innerHTML = `
      <div class="profileCardLeft">
        <div class="profileName">${numOrderElement.name}</div>
        <div class="profileNumber">${numOrderElement.num}</div>
@@ -447,53 +416,53 @@ function orderNumber(){
        <div class="weaknessesTitle">Debilidades:</div>
        <div class="profileWeaknesses">${numOrderElement.weaknesses}</div>
      </div>
-     `
-     profileContainer.appendChild(profileCard);
+     `;
+    profileContainer.appendChild(profileCard);
 
-     const closeButton = document.createElement("div");
-     closeButton.className = "closeButton";
-     profileCard.appendChild(closeButton);
+    const closeButton = document.createElement('div');
+    closeButton.className = 'closeButton';
+    profileCard.appendChild(closeButton);
 
-     const close = document.createElement('a');
-     close.className = 'btn-cerrar-popup';
-     closeButton.appendChild(close);
-     const icon = document.createElement('i')
-     icon.className = "far fa-times-circle";
-     close.appendChild(icon);
+    const close = document.createElement('a');
+    close.className = 'btn-cerrar-popup';
+    closeButton.appendChild(close);
+    const icon = document.createElement('i');
+    icon.className = 'far fa-times-circle';
+    close.appendChild(icon);
 
-    //CREANDO EVENTO ABRIR POPUP
-    let eventImag = document.querySelectorAll('.cardImage')
-    let eventImages = eventImag[eventImag.length-1];
-    eventImages.addEventListener('click',abrirPopup);
-    let overlay = document.querySelector('#profileContainer'); //el id lo tiene el overlay
-    let popup =  document.querySelectorAll('.profileCard');
-    let newPopup = popup[popup.length-1];
-    let btnClosePopup = document.querySelectorAll('.btn-cerrar-popup');
-    let newBtnClose = btnClosePopup[btnClosePopup.length-1];
+    // CREANDO EVENTO ABRIR POPUP
+    const eventImag = document.querySelectorAll('.cardImage');
+    const eventImages = eventImag[eventImag.length-1];
+    eventImages.addEventListener('click', abrirPopup);
+    const overlay = document.querySelector('#profileContainer'); // el id lo tiene el overlay
+    const popup = document.querySelectorAll('.profileCard');
+    const newPopup = popup[popup.length-1];
+    const btnClosePopup = document.querySelectorAll('.btn-cerrar-popup');
+    const newBtnClose = btnClosePopup[btnClosePopup.length-1];
     newBtnClose.addEventListener('click', cerrarPopup);
 
-      function abrirPopup(){
-           overlay.classList.add('active');
-           newPopup.classList.add('active');
-       };
-       function cerrarPopup(){
-          overlay.classList.remove('active');
-          newPopup.classList.remove('active');
-       };
+    function abrirPopup() {
+      overlay.classList.add('active');
+      newPopup.classList.add('active');
+    }
+    function cerrarPopup() {
+      overlay.classList.remove('active');
+      newPopup.classList.remove('active');
+    }
   });
 
-};
+}
 
-function limpiar(){
-  document.querySelector("#root").innerHTML = "";
-};
+function limpiar() {
+  document.querySelector('#root').innerHTML = '';
+}
 
-//let pokemon = ""
-//fetch('./data/pokemon/pokemon.json')
-//.then(res => res.json())
-//.then(pokemon =>{
-    //console.log(pokemon)
-    //showPokemon(pokemon)
+// let pokemon = ""
+// fetch('./data/pokemon/pokemon.json')
+// .then(res => res.json())
+// .then(pokemon =>{
+// console.log(pokemon)
+// showPokemon(pokemon)
 
 
-    //})
+// })

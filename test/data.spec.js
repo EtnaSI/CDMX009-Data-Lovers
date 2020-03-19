@@ -1,5 +1,5 @@
 // importamos la función `example`
-import { data } from "../src/data";
+import { data } from '../src/data';
 
 describe('data', () => {
   it('should be an object', () => {
@@ -8,7 +8,7 @@ describe('data', () => {
 
   describe('data.saveNumber', () => {
     const pokemon = {
-      "id": 1,
+    "id": 1,
     "num": "001",
     "name": "Bulbasaur",
     "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
