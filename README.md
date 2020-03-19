@@ -16,21 +16,6 @@ Presentamos el prototipo a jugadores reales de Pokémon GO, y nos reportaron lo 
 
 ### Prototipo de baja fidelidad
 
-<<<<<<< HEAD
-![](./imagenes/prototipoBajaFidelidad.png)
-
-### Prototipo de alta fidelidad
-
-![](./imagenes/prototipoAltaFidelidad.png)
-
-## Historias de usuario
-
-![](./imagenes/historiasDeUsuario1.png)
-![](./imagenes/historiasDeUsuario2.png)
-![](./imagenes/historiasDeUsuario3.png)
-![](./imagenes/historiasDeUsuario4.png)
-![](./imagenes/historiasDeUsuario5.png)
-=======
 ![prototipoBajaFidelidad](https://github.com/EtnaSI/CDMX009-Data-Lovers/blob/master/src/prototipoBajaFidelidad.png)
 
 ### Prototipo de alta fidelidad
@@ -43,7 +28,6 @@ Presentamos el prototipo a jugadores reales de Pokémon GO, y nos reportaron lo 
 ![historiasDeUsuario3-4](https://github.com/EtnaSI/CDMX009-Data-Lovers/blob/master/src/historiasDeUsuario3-4.png)
 ![historiasDeUsuario5-6](https://github.com/EtnaSI/CDMX009-Data-Lovers/blob/master/src/historiasDeUsuario5-6.png)
 ![historiasDeUsuario7](https://github.com/EtnaSI/CDMX009-Data-Lovers/blob/master/src/historiasDeUsuario7.png)
->>>>>>> 55a1575030450beb151dec5484f6d14e2aa6de85
 
 ## Objetivos de aprendizaje
 
@@ -73,7 +57,7 @@ Presentamos el prototipo a jugadores reales de Pokémon GO, y nos reportaron lo 
 - [X] Manipular objects (key | value).
 - [X] Entender el uso de condicionales (`if-else` | `switch`).
 - [X] Entender el uso de bucles (`for` | `forEach`).
-- [X] Entender la diferencia entre expression y statements.
+- [ ] Entender la diferencia entre expression y statements.
 - [X] Utilizar funciones (parámetros | argumentos | valor de retorno).
 - [ ] Entender la diferencia entre tipos de datos atómicos y estructurados.
 - [X] Utilizar ES Modules (`import` | `export`).
@@ -89,11 +73,4 @@ Presentamos el prototipo a jugadores reales de Pokémon GO, y nos reportaron lo 
 ### Buenas prácticas de desarrollo
 - [X] Organizar y dividir el código en módulos (Modularización).
 - [X] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
-<<<<<<< HEAD
-- [ ] Utilizar linter para seguir buenas prácticas (ESLINT).
-=======
 - [X] Utilizar linter para seguir buenas prácticas (ESLINT).
-
-
-
->>>>>>> 55a1575030450beb151dec5484f6d14e2aa6de85
